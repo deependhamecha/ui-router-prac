@@ -1,0 +1,46 @@
+html, body {
+	height: 100%;
+}
+
+.active { color: #ddd; font-weight: bold; }
+
+.grid {
+	width: 33%;
+	height: 200px;
+	/*background: purple;*/
+	display: inline-block;
+	color: #fff;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.buttons {
+	border: 1px solid #ddd;
+	padding: 6px 12px;
+	border-radius: 4px;
+	margin-top: 20px;
+	display: inline-block;
+	cursor: pointer;
+	font-family: sans-serif;
+}
+
+.mycontainer {
+    display: flex;
+    text-align: center;
+}
+
+.mycontainer > a {
+	flex: 1;
+	text-decoration: none;
+	font-size: 50px;
+	cursor: pointer;
+	color: #333;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+}
+
+.mycontainer > a:hover {
+	color: #ddd;
+}

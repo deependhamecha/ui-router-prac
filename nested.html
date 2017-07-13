@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title></title>
+
+	<script src="./node_modules/angular/angular.js" type="text/javascript"></script>
+	<script src="./node_modules/angular-ui-router/release/angular-ui-router.js" type="text/javascript"></script>
+
+	<script src="./app/nested.js" type="text/javascript"></script>
+
+
+	<link type="text/css" rel="stylesheet" href="./style.css" />
+</head>
+<body ng-app="nestedApp">
+
+	<a ui-sref="posts" ui-sref-active="active" class="buttons">Posts</a>
+	<a ui-sref="chats" ui-sref-active="active" class="buttons">Chats</a>
+	<a ui-sref="settings" ui-sref-active="active" class="buttons">Settings</a>
+
+    <br/><br/><br/><br/><br/>
+
+    <div ui-view></div>
+<!--     <div ng-view="posts"></div>
+    <div ng-view="chats"></div>
+    <div ng-view="settings"></div> -->
+</body>
+</html>

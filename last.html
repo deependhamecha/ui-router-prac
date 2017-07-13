@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script src="./node_modules/angular/angular.js" type="text/javascript"></script>
+	<script src="./node_modules/angular-ui-router/release/angular-ui-router.js" type="text/javascript"></script>
+	<link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<script src="./app/last.js" type="text/javascript"></script>
+
+	<link type="text/css" rel="stylesheet" href="./style.css" />
+</head>
+<body ng-app="lastApp">
+	<div class="mycontainer">
+		<a ui-sref="home">Home</a>
+		<a ui-sref="emp">Employee</a>
+	</div>
+
+	<div class="container text-center">
+		<div ui-view></div>
+	</div>
+</body>
+</html>
