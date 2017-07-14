@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script src="./node_modules/angular/angular.js" type="text/javascript"></script>
+	<script src="./node_modules/angular-ui-router/release/angular-ui-router.js" type="text/javascript"></script>
+
+	<script src="./app/a02.js" type="text/javascript"></script>
+
+	<link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="./style.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    	.active {
+    		color: orange !important;
+    	}
+    	a:hover {
+    		color: orange;
+    	}
+    </style>
+</head>
+<body ng-app="a02App">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 well text-center">
+				<h3><a ui-sref="root" class="mylinks">Home</a></h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 well text-center">
+				<a ui-sref="calc" ui-sref-active="active" class="mylinks">Calculator</a> 
+			</div>
+			<div class="col-md-offset-1 col-md-8 well text-center">
+				<div ui-view></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

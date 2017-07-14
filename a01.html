@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script src="./node_modules/angular/angular.js" type="text/javascript"></script>
+	<script src="./node_modules/angular-ui-router/release/angular-ui-router.js" type="text/javascript"></script>
+
+	<script src="./app/a01.js" type="text/javascript"></script>
+
+	<link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="./style.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    	a {
+    		color: purple;
+    	}
+    	a:hover {
+    		color: orange;
+    		text-decoration: none;
+    	}
+    </style>
+</head>
+<body ng-app="a01App">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-12 well text-center">
+				<a ui-sref="root"><h1 align="center">UI Router Example</h1></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 well">
+
+				<a ui-sref="firstMessage" class="mylinks">First Message</a>
+
+
+				<a ui-sref="myparams1({a:40, b:50})" class="mylinks">My First Params</a>
+
+				<a ui-sref="myparams1({a:40, b:null})" class="mylinks">My Optional Params</a>
+
+				<!-- ui-sref-opts="{inherit: false}"  DOES NOT WORK -->
+				<a ui-sref="myparams1({a:null, b:null})" class="mylinks">Full Optional Params</a>
+
+				<!-- Above will be converted to href (check console) -->
+				<!-- You can also use href="#!/myparams1/20/30" like this -->
+				<!-- <a href="#!/myparams1/40/50" class="mylinks">My First Params</a> -->
+
+				<a ui-sref="myparams2({a:1, b:2})" class="mylinks">My Second Params</a>
+
+				<a ui-sref="myparams3({a:100})" class="mylinks">My Third Params</a>
+				<!-- <a ui-sref="myparams3(null)" class="mylinks">My Third Params</a> -->
+				<!-- <a ui-sref="myparams3()" class="mylinks">My Third Params</a> -->
+
+
+				<a ui-sref="myparams4({a:4, b:5})" class="mylinks">My Fourth Params With Sref</a>
+				<a href="#!/myparams4" class="mylinks">Full Optional Params with Href</a>
+				<!-- <a ui-sref="myparams4({a:4, b:null})" class="mylinks">My Fourth Params</a> -->
+
+				<a ui-sref="myparams5({a:'-', b:'~'})" class="mylinks">My Fifth Params</a>
+
+				<a href="#!/myparams6?a=2&b=3" class="mylinks">My Sixth Params With Href</a>
+				<a ui-sref="myparams6({a:5, b:6})" class="mylinks">My Sixth Params With Sref</a>
+
+
+				<a href="#!/myparams7?a=4&b=3&b=2&b=9" class="mylinks">My Sixth Params Array With Sref</a>
+				<a ui-sref="myparams7({a:5, b:[1,2,3]})" class="mylinks">My Sixth Params Array With Sref</a>
+
+			</div>
+			<div class="col-md-offset-1 col-md-8 well text-center">
+				<div ui-view></div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

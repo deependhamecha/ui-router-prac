@@ -1,0 +1,29 @@
+EMP list
+<div class="panel panel-primary">
+	<div class="panel-body">
+		<div ng-show="isLoading" style="color:purple;font-weight:bold;">
+			<span class="glyphicon glyphicon-time"></span>Loading....
+		</div>
+
+		<div ng-show="!isLoading">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th class="text-center">Id</th>
+						<th class="text-center">Name</th>
+						<th class="text-center">Salary</th>
+						<th class="text-center">Dept</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="oEmp in emplist">
+						<td>{{ oEmp.id }}</td>
+						<td>{{ oEmp.name }}</td>
+						<td>{{ oEmp.sal }}</td>
+						<td>{{ oEmp.deptname }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
