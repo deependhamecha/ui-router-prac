@@ -26,6 +26,9 @@
     </style>
 </head>
 <body ng-app="multipleViews">
+
+    <ng-include src="'03views/header.html'"></ng-include>
+
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -40,7 +43,7 @@
                 <a ui-sref="employees" class="mylinks">Employees</a>
             </div>
 
-            <div class="col-md-offset-1 col-md-8 well text-center">
+            <div class="col-md-offset-1 col-md-5 well text-center">
                 <!-- <div ui-view></div> -->
                 <div ui-view="test"></div>
                 <div class="row">
@@ -52,6 +55,9 @@
                         <div ui-view="emp-list"></div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-3 well text-center">
+                <div ui-view="emp-detail"></div>
             </div>
         </div>
     </div>

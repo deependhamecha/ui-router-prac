@@ -9,6 +9,7 @@
   "author": "Deepen Dhamecha",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.6.5",
     "angular-ui-router": "^1.0.3",
     "bootstrap": "^3.3.7",
     "live-server": "^1.2.0"

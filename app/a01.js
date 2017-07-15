@@ -13,7 +13,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			url: '/first-msg',
 			template: '<strong>Hi, {{ name }} this is first message</strong>',
 			controller: function($scope) {
-				$scope.name = 'Deepen Dhamecha'
+				$scope.name = 'Deepen Dhamecha';
 			}
 		})
 		// .state('noroute', { // DEFAULT ROUTE

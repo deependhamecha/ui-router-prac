@@ -16,8 +16,8 @@ EMP list
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="oEmp in emplist">
-						<td>{{ oEmp.id }}</td>
+					<tr ng-repeat="oEmp in data">
+						<td><a ui-sref="emp-detail({ id:{{oEmp.id}} })">{{ oEmp.id }}</a></td>
 						<td>{{ oEmp.name }}</td>
 						<td>{{ oEmp.sal }}</td>
 						<td>{{ oEmp.deptname }}</td>

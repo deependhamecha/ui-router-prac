@@ -1,24 +1,24 @@
 app.service('dataService', function($http) {
 	var self = this;
 
-	this.data = [];
-
 	this.getAllEmployees = function() {
 		return $http.get('../03views/data.json')
-						.then(function successCallback(response) {
-							self.data =  response.data;
+						.then(function (response) {
+							return response.data;
 						});
-		// console.log(dude);
 	}
 
 	this.getEmployee = function(id) {
-		data.forEach(function(item, index) {
-			if(item.id == id) {
-				return item;
-			}
-		});
-
-		return null;
+		var el = {};
+		return $http.get('../03views/data.json')
+						.then(function (response) {
+							response.data.forEach(function(item, index) {
+								if(item.id == id) {
+									el = item;
+								}
+							})
+							return el;
+						});
 	}
 
 	this.getEmployeeByDept = function(deptname) {
